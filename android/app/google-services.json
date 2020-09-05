@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "811699076689",
+    "firebase_url": "https://med-hacks-app.firebaseio.com",
+    "project_id": "med-hacks-app",
+    "storage_bucket": "med-hacks-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811699076689:android:2069eb66ca17ad74990270",
+        "android_client_info": {
+          "package_name": "com.medhacks.flutter_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "811699076689-0aj9t0lrvk3pjo9q2ctbuee2una3dvsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9ghZMwpCBFNhG7hJv2b2Czcofp3Tdy0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "811699076689-0aj9t0lrvk3pjo9q2ctbuee2una3dvsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
