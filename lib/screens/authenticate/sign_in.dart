@@ -9,10 +9,17 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
 
+  final AuthService _auth = AuthService();
+
   Future<void> _signInAnonymously() async {
     try {
-      await FirebaseAuth.instance.signInAnonymously();
-
+      dynamic result = await _auth.signInAnon();
+      if(result == null){
+        print("error signing in");
+      }else{
+        print("signed in anon");
+        print(result.uid);
+      }
     } catch (e) {
       print(e); // TODO: show dialog with error
     }
