@@ -9,10 +9,10 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.orange[50],
+        // backgroundColor: Colors.green[50],
         appBar: AppBar(
           title: Text('Med Tracker Home'),
-          backgroundColor: Colors.blue[400],
+          backgroundColor: Colors.green[400],
           elevation: 0.0,
           actions: <Widget>[
             FlatButton.icon(
@@ -25,6 +25,7 @@ class Home extends StatelessWidget {
         ),
         body: Container(
             padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50),
+            alignment: Alignment.center,
             child: RaisedButton(
                 child: Text('Prescription Medication'),
                 onPressed: () async {

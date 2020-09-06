@@ -11,7 +11,7 @@ class Drug extends StatelessWidget {
     return MaterialApp(
       title: 'Patient Calendar',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.green,
       ),
       home: HomePage(),
 
@@ -135,6 +135,7 @@ class _HomePageState extends State<HomePage> {
                 alignment: Alignment.center,
                 child: RaisedButton(
                     child: Text('Yep!'),
+                    color: Colors.green,
                     onPressed: () async {
                       Navigator.push(
                         context,
@@ -147,6 +148,7 @@ class _HomePageState extends State<HomePage> {
               alignment: Alignment.center,
                 child: RaisedButton(
                     child: Text('Nope!'),
+                    color: Colors.red,
                     onPressed: () async {
                       Navigator.push(
                         context,

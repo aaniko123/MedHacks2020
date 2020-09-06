@@ -28,16 +28,17 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      // backgroundColor: Colors.green[100],
       appBar: AppBar(
-        backgroundColor: Colors.orange[400],
+        backgroundColor: Colors.green[400],
         elevation: 0.0,
         title: Text('Med Tracker Sign In'),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        alignment: Alignment.center,
         child: RaisedButton(
-          child: Text('Sign In Anonymously'),
+          child: Text('Sign In'),
           onPressed: _signInAnonymously,
         ),
       ),
