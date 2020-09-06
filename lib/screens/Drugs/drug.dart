@@ -128,7 +128,32 @@ class _HomePageState extends State<HomePage> {
               title: Text(event),
             )),
             new Container(
-              child: new Text('Hello'),
+              alignment: Alignment.center,
+              child: new Text('Have you taken your medication today?'),
+            ),
+            new Container(
+                alignment: Alignment.center,
+                child: RaisedButton(
+                    child: Text('Yep!'),
+                    onPressed: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Drug()),
+                      );
+                    }
+                )
+            ),
+            new Container(
+              alignment: Alignment.center,
+                child: RaisedButton(
+                    child: Text('Nope!'),
+                    onPressed: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Drug()),
+                      );
+                    }
+                )
             )
           ],
         ),
