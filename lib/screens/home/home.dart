@@ -24,18 +24,30 @@ class Home extends StatelessWidget {
           ],
         ),
         body: Container(
-            padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50),
-            child: RaisedButton(
-                child: Text('Prescription Medication'),
-                onPressed: () async {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Drug()),
-                  );
-                }
+            //color: Colors.white,
+            padding: EdgeInsets.fromLTRB(5,5,5,0),
+            height: 220,
+            width: double.maxFinite,
+              child: Padding(
+              padding: EdgeInsets.all(7),
+                  child: RaisedButton(
+                   color: Colors.white,
+                   child: Text('Tylenol',
+                    style: TextStyle(
+                    color: Colors.grey[800],
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.italic,
+                    fontFamily: 'Open Sans',
+                    fontSize: 30),),
+              onPressed: () async => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Drug()),
+                  )
             )
         )
+      ),
 
     );
+
   }
 }
