@@ -154,7 +154,27 @@ class _HomePageState extends State<HomePage> {
                       );
                     }
                 )
-            )
+            ),
+            new Container(
+                alignment: Alignment.bottomCenter,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    labelText: 'What are your symptoms like today?'
+                  ),
+                )
+            ),
+            new Container(
+                alignment: Alignment.center,
+                child: RaisedButton(
+                    child: Text('Submit'),
+                    onPressed: () async {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Drug()),
+                      );
+                    }
+                )
+            ),
           ],
         ),
       ),
