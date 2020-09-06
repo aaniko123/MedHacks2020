@@ -1,35 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/services/auth.dart';
+import 'package:table_calendar/table_calendar.dart';
+
+void main() => runApp(Drug());
 
 class Drug extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Patient Calendar',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
+      home: HomePage(),
 
-  final AuthService _auth = AuthService();
+    );
+  }
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+class _HomePageState extends State<HomePage> {
+  CalendarController controller;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    controller = CalendarController();
+  }
 
   @override
-Widget build(BuildContext context) {
-  return Scaffold(
-      backgroundColor: Colors.orange[50],
+  Widget build(BuildContext context){
+    return Scaffold(
       appBar: AppBar(
-        title: Text('Med Tracker Drug'),
-        backgroundColor: Colors.blue[400],
-        elevation: 0.0,
-        actions: <Widget>[
-          FlatButton.icon(
-              onPressed: () async {
-                await _auth.signOut();
-              },
-              icon: Icon(Icons.person),
-              label: Text('logout'))
-        ],
-      ),
-      body: Container(
-          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50),
-          child: RaisedButton(
-              child: Text('<'),
-              onPressed: () async => Navigator.pop(context)
-          )
-      )
+        title:Text('Flutter Cal'),
 
-  );
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            TableCalendar(calendarController: controller,)
+          ],
+
+        ),
+      ),
+
+
+    );
   }
 }
