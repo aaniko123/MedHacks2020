@@ -127,6 +127,9 @@ class _HomePageState extends State<HomePage> {
             ..._selectedEvents.map((event) => ListTile(
               title: Text(event),
             )),
+            new Container(
+              child: new Text('Hello'),
+            )
           ],
         ),
       ),
