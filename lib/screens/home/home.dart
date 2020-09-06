@@ -13,6 +13,7 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: Text('Med Tracker Home'),
           backgroundColor: Colors.green[400],
+
           elevation: 0.0,
           actions: <Widget>[
             FlatButton.icon(
@@ -21,24 +22,31 @@ class Home extends StatelessWidget {
                 },
                 icon: Icon(Icons.person),
                 label: Text('logout'))
+
           ],
+
         ),
+
         body: Container(
+
             //color: Colors.white,
+
             padding: EdgeInsets.fromLTRB(5,5,5,0),
             height: 220,
             width: double.maxFinite,
               child: Padding(
               padding: EdgeInsets.all(7),
                   child: RaisedButton(
+
                    color: Colors.white,
-                   child: Text('Tylenol',
+                   child: Text('Zyrtec Prescription',
                     style: TextStyle(
                     color: Colors.grey[800],
                     fontWeight: FontWeight.w400,
                     fontStyle: FontStyle.italic,
                     fontFamily: 'Open Sans',
-                    fontSize: 30),),
+                    fontSize: 30),
+                   ),
               onPressed: () async => Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => Drug()),
